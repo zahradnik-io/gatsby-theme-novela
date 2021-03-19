@@ -365,7 +365,7 @@ import novelaTheme from '@zahradnik-io/gatsby-theme-novela/src/gatsby-plugin-the
 
 export default {
   ...novelaTheme,
-  initialColorMode: `dark`,
+  initialColorModeName: `dark`,
   colors: {
     ...novelaTheme.colors,
     primary: '#000',
