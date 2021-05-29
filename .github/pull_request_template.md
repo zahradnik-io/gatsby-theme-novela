@@ -1,6 +1,6 @@
 # Checklist:
 
-* [ ] I have followed the guidelines in our [Contributing Guidelines](https://github.com/narative/gatsby-theme-novela/blob/master/CONTRIBUTING.md). _Especially our commitlint_
+* [ ] I have followed the guidelines in our [Contributing Guidelines](https://github.com/zahradnik-io/gatsby-theme-novela/blob/main/CONTRIBUTING.md). _Especially our commitlint_
 * [ ] I have checked to ensure there aren't other open [Pull Requests](../../../pulls) for the same update/fix/change.
 * [ ] I have checked for an open issue related to this. _There isn't one / There is one : #XXX_
 * [ ] I have performed a self-review of my own code.

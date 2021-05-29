@@ -1,9 +1,9 @@
 require("dotenv").config();
 
 const siteMetadata = {
-  title: `Novela by Narative`,
-  name: `Narative`,
-  siteUrl: `https://novela.narative.co`,
+  title: `Novela by zahradnik-io`,
+  name: `Vladimír Záhradník`,
+  siteUrl: `https://www.zahradnik.io/`,
   description: `This is my description that will be used in the meta tags and important for search results`,
   hero: {
     heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
@@ -11,38 +11,23 @@ const siteMetadata = {
   },
   social: [
     {
-      url: `https://twitter.com/narative`,
+      url: `https://twitter.com/VladoZahradnik`,
     },
     {
-      url: `https://behance.com/narative`,
+      url: `https://github.com/zahradnik-io`,
     },
     {
-      url: `https://github.com/narative`,
+      url: `https://www.instagram.com/vladimir.zahradnik`,
     },
     {
-      url: `https://instagram.com/narative.co`,
+      url: `https://www.linkedin.com/in/vzahradnik/`,
     },
     {
-      url: `https://www.linkedin.com/company/narative/`,
-    },
-    {
-      url: `https://dribbble.com/narativestudio`,
-    },
-    {
-      url: `https://youtube.com`,
+      url: `https://www.youtube.com/channel/UCogZ6qxqKa_WIsw7NnU2IaA`,
     },
     {
       name: 'stackoverflow',
-      url: `https://bit.ly/1x0885j`,
-    },
-    {
-      url: `https://digitalocean.com`,
-    },
-    {
-      url: `https://tripadvisor.com`,
-    },
-    {
-      url: `https://notion.so`,
+      url: `https://stackoverflow.com/users/3296749/vzahradnik`,
     },
     {
       name: `mailto`,
@@ -53,7 +38,7 @@ const siteMetadata = {
 
 const plugins = [
   {
-    resolve: "@narative/gatsby-theme-novela",
+    resolve: "@zahradnik-io/gatsby-theme-novela",
     options: {
       contentPosts: "content/posts",
       contentAuthors: "content/authors",
@@ -70,7 +55,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `Novela by Narative`,
+      name: `Novela by zahradnik-io`,
       short_name: `Novela`,
       start_url: `/`,
       background_color: `#fff`,
@@ -101,9 +86,9 @@ const plugins = [
  *
  * To enanble Contentful you must
  * 1. Create a new Space on contentful.com
- * 2. Import the Contentful Model from @narative/gatsby-theme-novela/conteful
+ * 2. Import the Contentful Model from @zahradnik-io/gatsby-theme-novela/conteful
  * 3. Add .env to www/ (see www/env.example)
- * 4. Enable contentful as a source in this file for @narative/gatsby-theme-novela
+ * 4. Enable contentful as a source in this file for @zahradnik-io/gatsby-theme-novela
  */
 if (process.env.CONTENTFUL_SPACE_ID && process.env.CONTENTFUL_ACCESS_TOKEN) {
   plugins.push({
