@@ -247,7 +247,7 @@ module.exports = {
       },
       {
         name: `github`,
-        url: `https://github.com/vzahradnik`,
+        url: `https://github.com/zahradnik-io`,
       },
     ],
   },
@@ -652,7 +652,7 @@ module.exports = {
         url: `https://twitter.com/VladoZahradnik`,
       },
       {
-        url: `https://github.com/vzahradnik`,
+        url: `https://github.com/zahradnik-io`,
       },
       {
         url: `https://www.instagram.com/vladimir.zahradnik/`,
