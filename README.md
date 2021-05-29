@@ -1,26 +1,26 @@
-<a href="https://www.narative.co/labs/novela/" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-hero.jpg" alt="gatsby-novela-theme hero image" />
+<a href="https://www.zahradnik.io/" target="_blank">
+<img src="https://raw.githubusercontent.com/zahradnik-io/gatsby-theme-novela-example/main/assets/gatsby-theme-novela-hero.jpg" alt="gatsby-novela-theme hero image" />
 </a>
 
 <br/>
 
-# Novela — A Gatsby theme by Narative
+# Novela — A Gatsby theme by Narative (fork by vzahradnik)
 
 With minimal styling and maximum features — including multiple homepage layouts, built-in social sharing and dark mode — Novela makes it easy to start publishing beautiful articles and stories with Gatsby.
 
-Novela is built by the team at [Narative](https://www.narative.co), and built for everyone that loves the web.
+Novela was built by the team at [Narative](https://www.narative.co) for everyone that loves the web. I, Vladimír, will continue maintaining and improving the theme for the needs of my personal blog site. Feel free to contribute. Let's make this project thrive again.
 
 Special thanks to [@jpvalery](https://github.com/jpvalery) for helping maintain Novela.
 
 <div>
-<a href="https://www.narative.co/labs/novela/" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="gatsby-novela-theme live demo" width="295px" />
+<a href="https://www.zahradnik.io/" target="_blank">
+<img src="https://raw.githubusercontent.com/zahradnik-io/gatsby-theme-novela-example/main/assets/gatsby-theme-novela-cta-demo.jpg" alt="gatsby-novela-theme live demo" width="295px" />
 </a>
 </div>
 
 <div>
 <a href="https://www.narative.co/design/open/novela" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-figma.jpg" alt="gatsby-novela-theme figma link" width="295px" />
+<img src="https://raw.githubusercontent.com/zahradnik-io/gatsby-theme-novela-example/main/assets/gatsby-theme-novela-cta-figma.jpg" alt="gatsby-novela-theme figma link" width="295px" />
 </a>
 </div>
 
@@ -78,13 +78,13 @@ This guide will take you through setting up Novela with Gatsby Starter Novela.
 ##### With `gatsby-cli`:
 
 ```sh
-gatsby new novela-site https://github.com/narative/gatsby-starter-novela
+gatsby new novela-site https://github.com/zahradnik-io/gatsby-starter-novela
 ```
 
 ##### With `git clone`:
 
 ```sh
-git clone git@github.com:narative/gatsby-starter-novela.git novela-site
+git clone git@github.com:zahradnik-io/gatsby-starter-novela.git novela-site
 
 cd novela-site
 
@@ -113,7 +113,7 @@ To learn more about adding Authors, Posts, and Site Metadata see:
 
 This guide will take you through adding Novela to a new project. You do not require any Gatsby starters or similar, but you can add Novela to an existing Gatsby project.
 
-You can also view the completed [example repository](https://github.com/narative/gatsby-theme-novela-example).
+You can also view the completed [example repository](https://github.com/zahradnik-io/gatsby-theme-novela-example).
 
 ### Step 1: Installation
 
@@ -122,7 +122,7 @@ You can also view the completed [example repository](https://github.com/narative
 mkdir novela-site && cd novela-site
 
 # Add all required dependencies
-yarn add react react-dom gatsby @narative/gatsby-theme-novela
+yarn add react react-dom gatsby @zahradnik-io/gatsby-theme-novela
 ```
 
 ### Step 2: Folder structure
@@ -148,22 +148,22 @@ The recommended project structure for your content and site looks like this:
     └── package.json
 ```
 
-### Step 3: Using `@narative/gatsby-theme-novela`
+### Step 3: Using `@zahradnik-io/gatsby-theme-novela`
 
-You must add `@narative/gatsby-theme-novela` as a plugin in `gatsby-config.js`.
-`@narative/gatsby-theme-novela` is configurable through plugin options but we will use the defaults for now.
+You must add `@zahradnik-io/gatsby-theme-novela` as a plugin in `gatsby-config.js`.
+`@zahradnik-io/gatsby-theme-novela` is configurable through plugin options but we will use the defaults for now.
 
 ```js
 // gatsby-config.js
 
 module.exports = {
-  plugins: ['@narative/gatsby-theme-novela'],
+  plugins: ['@zahradnik-io/gatsby-theme-novela'],
 };
 ```
 
 ---
 
-Once you've setup `@narative/gatsby-theme-novela` plugin in `gatsby-config.js` you can start creating your first Posts. In order to create a Post you also need at least one Author.
+Once you've setup `@zahradnik-io/gatsby-theme-novela` plugin in `gatsby-config.js` you can start creating your first Posts. In order to create a Post you also need at least one Author.
 
 ### Step 4: Adding an Author
 
@@ -230,28 +230,28 @@ Add your Site Metadata to the `gatsby-config.js` file.
 
 module.exports = {
   siteMetadata: {
-    title: `Novela by Narative`,
-    name: `Narative`,
+    title: `Novela by zahradnik-io`,
+    name: `Vladimír Záhradník`,
     siteUrl: `https://gatsby-theme-novela.netlify.com`,
     description: `This is my description that will be used in the meta tags and important for search results`,
 
     // important to set the main text that appears in the hero
     hero: {
-      heading: `Perspectives on technology, design and business from the team at Narative.`,
+      heading: `Perspectives on technology, design and business from Vladimír Záhradník.`,
       maxWidth: 652,
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/VladoZahradnik`,
       },
       {
         name: `github`,
-        url: `https://github.com/narative`,
+        url: `https://github.com/vzahradnik`,
       },
     ],
   },
-  plugins: ['@narative/gatsby-theme-novela'],
+  plugins: ['@zahradnik-io/gatsby-theme-novela'],
 };
 ```
 
@@ -259,7 +259,7 @@ module.exports = {
 
 Once all steps have been completed you can run your site. In the root of your project run `gatsby develop`.
 
-If you ran into problems you can reference the [example repository](https://github.com/narative/gatsby-theme-novela-example) or create an issue.
+If you ran into problems you can reference the [example repository](https://github.com/zahradnik-io/gatsby-theme-novela-example) or create an issue.
 
 <br />
 
@@ -312,7 +312,7 @@ plugins: [
     },
   },
   {
-    resolve: '@narative/gatsby-theme-novela',
+    resolve: '@zahradnik-io/gatsby-theme-novela',
     options: {
       sources: {
         contentful: true,
@@ -324,11 +324,11 @@ plugins: [
 
 Finally, import the Contentful Model from Novela to get started. Novela Contentful Queries will not work without this exact data model.
 
-#### [Novela Contentful Data](https://github.com/narative/gatsby-theme-novela/tree/master/%40narative/gatsby-theme-novela/contentful)
+#### [Novela Contentful Data](https://github.com/zahradnik-io/gatsby-theme-novela/tree/main/%40zahradnik-io/gatsby-theme-novela/contentful)
 
 [Contentful space import docs](https://github.com/contentful/contentful-cli/tree/master/docs/space/import)
 
-Once you have your project setup with `gatsby-source-contentful` and `@narative/gatsby-theme-novela` and your Contentful space is setup with the imported model you are good to go.
+Once you have your project setup with `gatsby-source-contentful` and `@zahradnik-io/gatsby-theme-novela` and your Contentful space is setup with the imported model you are good to go.
 
 ⚠️ Please make sure you have at least one Media Asset uploaded or you will run into a GraphQL error: https://github.com/gatsbyjs/gatsby/issues/15397
 
@@ -346,7 +346,7 @@ By default Author pages are not enabled. They can be enabled through the plugin 
 module.exports = {
   plugins: [
     {
-      resolve: '@narative/gatsby-theme-novela',
+      resolve: '@zahradnik-io/gatsby-theme-novela',
       options: {
         authorsPage: true,
       },
@@ -360,12 +360,12 @@ module.exports = {
 Novela allows you to change the default theme styling by updating the [theme-ui](https://theme-ui.com/) values. If you're familiar with Styled Components or Emotion it's the same as adapting the theme you pass to `ThemeProvider`.
 
 First, you must create a theme file and then you can override `novelaTheme` values.
-[See all Novela theme values](https://github.com/narative/gatsby-theme-novela/tree/master/%40narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui)
+[See all Novela theme values](https://github.com/zahradnik-io/gatsby-theme-novela/tree/main/%40zahradnik-io/gatsby-theme-novela/src/gatsby-plugin-theme-ui)
 
 ```js
 // src/gatsby-plugin-theme-ui/index.js
 
-import novelaTheme from '@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui';
+import novelaTheme from '@zahradnik-io/gatsby-theme-novela/src/gatsby-plugin-theme-ui';
 
 export default {
   ...novelaTheme,
@@ -387,7 +387,7 @@ export default {
 
 > Component Shadowing lets you replace the theme’s original file, gatsby-theme-novela/src/components/Logo.js, with your own to implement any changes you need.
 
-Any [component](https://github.com/narative/gatsby-theme-novela/tree/master/%40narative/gatsby-theme-novela/src/components) or [section](https://github.com/narative/gatsby-theme-novela/tree/master/%40narative/gatsby-theme-novela/src/sections) is able to be replaced with your own custom component.
+Any [component](https://github.com/zahradnik-io/gatsby-theme-novela/tree/main/%40zahradnik-io/gatsby-theme-novela/src/components) or [section](https://github.com/zahradnik-io/gatsby-theme-novela/tree/main/%40zahradnik-io/gatsby-theme-novela/src/sections) is able to be replaced with your own custom component.
 
 This opens up a full customization of Novela to your designed needs. You can copy any component directly from Novela and alter it how you like, or you can create your own component to replace Novela's entirely.
 
@@ -428,7 +428,7 @@ Start by creating the component file at:
 ```
   novela-site
   └── src
-    └── @narative
+    └── @zahradnik-io
       └── gatsby-theme-novela
         └── components
           └── Logo
@@ -473,7 +473,7 @@ Then configure the plugins
 ```js
 plugins: [
   {
-    resolve: '@narative/gatsby-theme-novela',
+    resolve: '@zahradnik-io/gatsby-theme-novela',
     options: {
       contentPosts: 'content/posts',
       contentAuthors: 'content/authors',
@@ -500,7 +500,7 @@ You will want to override it here:
 ```
   novela-site
   └── src
-    └── @narative
+    └── @zahradnik-io
       └── gatsby-theme-novela
         └── components
           └── Subscription
@@ -529,12 +529,12 @@ It is recommended to use the Default options, but if your project requires somet
 | sources.local          |      true       |                                                Enable local file system data source                                                 |
 | sources.contentful     |      false      |                                                    Enable Contentful data source                                                    |
 
-[View Theme option example](https://github.com/narative/gatsby-theme-novela-example/blob/master/gatsby-config.js#L36)
+[View Theme option example](https://github.com/zahradnik-io/gatsby-theme-novela-example/blob/main/gatsby-config.js#L36)
 
 ```js
 plugins: [
   {
-    resolve: '@narative/gatsby-theme-novela',
+    resolve: '@zahradnik-io/gatsby-theme-novela',
     options: {
       contentPosts: 'content/posts',
       contentAuthors: 'content/authors',
@@ -553,7 +553,7 @@ plugins: [
 
 ## Author
 
-[View Author example](https://github.com/narative/gatsby-theme-novela-example/blob/master/content/authors/authors.yml)
+[View Author example](https://github.com/zahradnik-io/gatsby-theme-novela-example/blob/main/content/authors/authors.yml)
 
 | Key      | Required |  Type   |                                                                 Description                                                                 |
 | -------- | :------: | :----- | :---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -562,7 +562,7 @@ plugins: [
 | avatar   | required |  Image  |                                                            The Author's avatar                                                             |
 | featured | optional | Boolean |                                              If `true` the Author will appear on the homepage                                              |
 | slug     | optional | String  |                          Override the autogenerated slug based on the Author's name. Do not include any slashes.                           |
-| social   | required |  Array  | A list of social accounts and urls. [View supported icon/name combinations](https://github.com/narative/gatsby-theme-novela/blob/master/%40narative/gatsby-theme-novela/src/components/SocialLinks/SocialLinks.tsx#L15) |
+| social   | required |  Array  | A list of social accounts and urls. [View supported icon/name combinations](https://github.com/zahradnik-io/gatsby-theme-novela/blob/main/%40zahradnik-io/gatsby-theme-novela/src/components/SocialLinks/SocialLinks.tsx#L15) |
 
 ```yml
 - name: Dennis Brotzky
@@ -595,7 +595,7 @@ plugins: [
 | subscription | optional |   String   |          If mailchimp is enabled disable the subscription box on an individual Post           |
 | secret       | optional |  Boolean   |           If secret the Post will not appear in paginated lists. Defaults to false.           |
 
-[View Post example](https://github.com/narative/gatsby-theme-novela-example/blob/master/content/posts/2019-04-31-understanding-the-gatsby-lifecycle/index.mdx)
+[View Post example](https://github.com/zahradnik-io/gatsby-theme-novela-example/blob/main/content/posts/2019-04-31-understanding-the-gatsby-lifecycle/index.mdx)
 
 ```yml
 # novela-site/content/posts/2020-01-01/index.mdx
@@ -622,9 +622,9 @@ excerpt: This is a love story about Narative and Gatsby
 | description   | required |   String   |                                                                  Used in meta tags                                                                  |
 | hero.heading  | required |   String   |                                                                  Used in the Hero                                                                   |
 | hero.maxWidth | optional |   number   |                                                          Used in the Hero. Defaults to 652                                                          |
-| social        | required |   Array    | [View supported icon/name combinations](https://github.com/narative/gatsby-theme-novela/blob/master/%40narative/gatsby-theme-novela/src/components/SocialLinks/SocialLinks.tsx#L15). `url` is required and the icon is chosen based on the url. If you also provide `name`, then the icon will be the same as the name you provided as long as the name equals one of the supported icons (See example bellow). Used in site footer and meta tags |
+| social        | required |   Array    | [View supported icon/name combinations](https://github.com/zahradnik-io/gatsby-theme-novela/blob/main/%40zahradnik-io/gatsby-theme-novela/src/components/SocialLinks/SocialLinks.tsx#L15). `url` is required and the icon is chosen based on the url. If you also provide `name`, then the icon will be the same as the name you provided as long as the name equals one of the supported icons (See example bellow). Used in site footer and meta tags |
 
-[View Site Metadata example](https://github.com/narative/gatsby-theme-novela-example/blob/master/gatsby-config.js)
+[View Site Metadata example](https://github.com/zahradnik-io/gatsby-theme-novela-example/blob/main/gatsby-config.js)
 
 Within `gatsby-config.js` you can configure `siteMetadata` to show the values you wish.
 It is `required` to add `siteMetada`
@@ -633,15 +633,15 @@ It is `required` to add `siteMetada`
 // gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Novela by Narative`,
-    name: `Narative`,
+    title: `Novela by zahradnik-io`,
+    name: `Vladimír Záhradník`,
     siteUrl: `https://gatsby-theme-novela.netlify.com`,
     description: `This is my description that will be used in the meta tags and important for search results`,
 
     // hero
     // A required key and will be displayed on the main page of Noveal
     hero: {
-      heading: `Perspectives on technology, design and business from the team at Narative.`,
+      heading: `Perspectives on technology, design and business from Vladimír Záhradník.`,
       maxWidth: 652,
     },
 
@@ -649,20 +649,17 @@ module.exports = {
     // Add in the social links that will be displayed in the footer
     social: [
       {
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/VladoZahradnik`,
       },
       {
-        url: `https://github.com/narative`,
+        url: `https://github.com/vzahradnik`,
       },
       {
-        url: `https://www.instagram.com/narative.co/`,
-      },
-      {
-        url: `https://dribbble.com/narativestudio`,
+        url: `https://www.instagram.com/vladimir.zahradnik/`,
       },
       {
         name: 'stackoverflow',
-        url: `https://bit.ly/1x0885j`,
+        url: `https://stackoverflow.com/users/3296749/vzahradnik`,
       },
     ],
   },
@@ -685,7 +682,7 @@ Start building an audience and grow your blog subscribers with Mailchimp.
 
 Out of the box, Novela includes both light and dark designs that can be toggled by the user anywhere across the site.
 
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-light-dark.gif" alt="gatsby-novela-theme light dark theme demonstration" />
+<img src="https://raw.githubusercontent.com/zahradnik-io/gatsby-theme-novela-example/main/assets/gatsby-theme-novela-light-dark.gif" alt="gatsby-novela-theme light dark theme demonstration" />
 
 ### Simple Customization with [Theme UI](https://theme-ui.com/)
 
@@ -699,7 +696,7 @@ High quality embedded codeblocks that make authoring technical blog posts a bree
 
 Users can select text within an article to copy or share to platforms like Twitter and LinkedIn.
 
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-share.jpg" alt="gatsby-novela-theme light dark theme demonstration" />
+<img src="https://raw.githubusercontent.com/zahradnik-io/gatsby-theme-novela-example/main/assets/gatsby-theme-novela-share.jpg" alt="gatsby-novela-theme light dark theme demonstration" />
 
 ### Read Time and Progress
 
@@ -709,7 +706,7 @@ Read time is automatically generated for each article based on length, with an a
 
 Navigable by cursor or keyboard, readable via screens and screen readers, Novela ensures everyone on the web can read what you write.
 
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-accessibility.gif" alt="gatsby-novela-theme accessibility demonstration" />
+<img src="https://raw.githubusercontent.com/zahradnik-io/gatsby-theme-novela-example/main/assets/gatsby-theme-novela-accessibility.gif" alt="gatsby-novela-theme accessibility demonstration" />
 
 # The Future
 
@@ -723,12 +720,12 @@ This project is early in development and we are interested in creating an even m
 
 <div>
 <a href="https://gatsby-theme-novela.netlify.com" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="gatsby-novela-theme live demo" width="295px" />
+<img src="https://raw.githubusercontent.com/zahradnik-io/gatsby-theme-novela-example/main/assets/gatsby-theme-novela-cta-demo.jpg" alt="gatsby-novela-theme live demo" width="295px" />
 </a>
 </div>
 
 <div>
 <a href="https://www.narative.co/design/open/novela" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-figma.jpg" alt="gatsby-novela-theme figma link" width="295px" />
+<img src="https://raw.githubusercontent.com/zahradnik-io/gatsby-theme-novela-example/main/assets/gatsby-theme-novela-cta-figma.jpg" alt="gatsby-novela-theme figma link" width="295px" />
 </a>
 </div>

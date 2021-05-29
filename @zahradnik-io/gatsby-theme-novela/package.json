@@ -1,12 +1,12 @@
 {
-  "name": "@narative/gatsby-theme-novela",
-  "author": "dennis@narative.co",
-  "repository": "https://github.com/narative/gatsby-theme-novela",
+  "name": "@zahradnik-io/gatsby-theme-novela",
+  "author": "vladimir@zahradnik.io",
+  "repository": "https://github.com/zahradnik-io/gatsby-theme-novela",
   "version": "0.18.7",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
-    "narative",
+    "zahradnik-io",
     "gatsby",
     "gatsby-plugin",
     "gatsby-theme",

@@ -5,7 +5,7 @@
 This project uses [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) so you can run the Novela locally with an example site.
 
 ```sh
-  git clone git@github.com:narative/gatsby-theme-novela.git
+  git clone git@github.com:zahradnik-io/gatsby-theme-novela.git
 
   cd gatsby-theme-novela
 
@@ -30,7 +30,7 @@ We're more than happy with PRs that fix typos, syntax errors, and types. You do 
 
 ## Commitlint Guidelines
 
-In order for our publishing workflows with Lerna to properly function, we strictly follow our [.commitlintrc.yml](https://github.com/narative/gatsby-theme-novela/blob/master/.commitlintrc.yml); itself based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/).
+In order for our publishing workflows with Lerna to properly function, we strictly follow our [.commitlintrc.yml](https://github.com/zahradnik-io/gatsby-theme-novela/blob/main/.commitlintrc.yml); itself based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/).
 
 Commit should start with a type and the header shouldn't have more than 72 characters.
 
