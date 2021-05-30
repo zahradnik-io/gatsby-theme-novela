@@ -84,7 +84,7 @@ const plugins = [
  * set we don't want to add in gatsby-source-contentful because it will throw
  * an error.
  *
- * To enanble Contentful you must
+ * To enable Contentful you must
  * 1. Create a new Space on contentful.com
  * 2. Import the Contentful Model from @zahradnik-io/gatsby-theme-novela/conteful
  * 3. Add .env to www/ (see www/env.example)
