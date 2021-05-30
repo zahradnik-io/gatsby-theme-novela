@@ -3,7 +3,7 @@ name: Publish with Lerna
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   Publish_Workflow:
@@ -17,8 +17,8 @@ jobs:
         fetch-depth: "0"
     - name: Git Identity
       run: |
-        git config --global user.name '@jpvalery'
-        git config --global user.email 'jpvalery@users.noreply.github.com'
+        git config --global user.name 'Vladimír Záhradník'
+        git config --global user.email 'vladimir@zahradnik.io'
         git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
