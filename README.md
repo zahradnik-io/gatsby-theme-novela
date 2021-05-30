@@ -5,6 +5,7 @@
 <br/>
 
 # Novela — A Gatsby theme by Narative (fork by vzahradnik)
+[![Build](https://github.com/zahradnik-io/gatsby-theme-novela/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/zahradnik-io/gatsby-theme-novela/actions/workflows/build.yml)
 
 With minimal styling and maximum features — including multiple homepage layouts, built-in social sharing and dark mode — Novela makes it easy to start publishing beautiful articles and stories with Gatsby.
 
