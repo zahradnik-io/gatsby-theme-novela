@@ -1,0 +1,19 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  CI_Workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Yarn Install
+      run: yarn install
+    - name: Yarn Lint
+      run: yarn lint
+    - name: Yarn Build
+      run: yarn build
