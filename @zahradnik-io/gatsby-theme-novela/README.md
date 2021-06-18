@@ -55,6 +55,7 @@ Novela was built by the team at [Narative](https://www.narative.co) for everyone
   - [Using images](#using-images)
   - [Adding your logo](#adding-your-logo)
   - [Adding Mailchimp](#adding-mailchimp)
+  - [Adding Disqus](#adding-disqus)
 
 - [Data Models](#data-models)
 
@@ -503,6 +504,37 @@ You will want to override it here:
 
 <br />
 
+### Adding Disqus
+
+Want to add a comments section below your Posts? Novela gives you the option to integrate Disqus in a few easy steps.
+
+We're using [gatsby-plugin-disqus](https://github.com/tterb/gatsby-plugin-disqus). It is installed for you automatically, because it's Novela theme dependency.
+
+Configure the plugin:
+
+```js
+plugins: [
+  {
+    resolve: '@zahradnik-io/gatsby-theme-novela',
+    options: {
+      contentPosts: 'content/posts',
+      contentAuthors: 'content/authors',
+      basePath: '/',
+      disqus: true, // make sure this is true!
+    },
+  },
+  {
+    resolve: 'gatsby-plugin-disqus',
+    options: {
+      shortname: `your-disqus-shortname`
+    },
+  },
+];
+```
+
+That's it. You will now have comments section on each of your Posts.
+To disable comments on individual Posts you can set `comments: false` on the Post.
+
 # Data Models
 
 ## Theme Options
@@ -519,6 +551,7 @@ It is recommended to use the Default options, but if your project requires somet
 | basePath               | /               | Where should the site be served from? `/blog` will change all paths to start with `/blog`                                           |
 | articlePermalinkFormat | :slug           | Define the format of the article permalink. Possible values: `:slug`, `:year`, `:month`, `:day`. Example: `:year/:month/:day/:slug` |
 | mailchimp              | false           | Enable Mailchimp subscriptions on each Post                                                                                         |
+| disqus                 | false           | Enable Disqus comments on each Post                                                                                                 |
 | sources.local          | true            | Enable local file system data source                                                                                                |
 | sources.contentful     | false           | Enable Contentful data source                                                                                                       |
 
