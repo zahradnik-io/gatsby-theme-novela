@@ -619,6 +619,7 @@ plugins: [
 | excerpt      | required | String     | 140 character limit                                                                           |
 | subscription | optional | String     | If mailchimp is enabled disable the subscription box on an individual Post                    |
 | secret       | optional | Boolean    | If secret the Post will not appear in paginated lists. Defaults to false.                     |
+| comments     | optional |  Boolean   |           If Disqus in enabled, disable the comments section on an individual post.           |
 
 [View Post example](https://github.com/zahradnik-io/gatsby-theme-novela-example/blob/main/content/posts/2019-04-31-understanding-the-gatsby-lifecycle/index.mdx)
 
