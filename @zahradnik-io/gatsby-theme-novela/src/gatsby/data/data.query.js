@@ -31,6 +31,7 @@ module.exports.local = {
           excerpt
           canonical_url
           subscription
+          comments
           body
           hero {
             full: childImageSharp {

@@ -55,6 +55,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
     pageLength = 6,
     sources = {},
     mailchimp = '',
+    disqus = '',
   } = themeOptions;
 
   const { data } = await graphql(`
@@ -227,6 +228,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
         title: article.title,
         canonicalUrl: article.canonical_url,
         mailchimp,
+        disqus,
         next,
       },
     });

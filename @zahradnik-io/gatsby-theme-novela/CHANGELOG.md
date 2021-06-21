@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.9](https://github.com/zahradnik-io/gatsby-theme-novela/compare/@zahradnik-io/gatsby-theme-novela@0.18.9...@zahradnik-io/gatsby-theme-novela@0.18.8) (2021-06-18)
+
+### Bug Fixes
+
+* Fix Disqus so that it is not stretched across whole screen, but only in the middle.
+
+## [0.18.8](https://github.com/zahradnik-io/gatsby-theme-novela/compare/@zahradnik-io/gatsby-theme-novela@0.18.7...@zahradnik-io/gatsby-theme-novela@0.18.8) (2021-06-18)
+
+### Features
+
+* Add comments functionality using [Disqus](https://disqus.com/)
+
+### Chores
+
+* Update theme-ui from 0.2.40 to 0.3.5
+
 ## [0.18.7](https://github.com/zahradnik-io/gatsby-theme-novela/compare/@zahradnik-io/gatsby-theme-novela@0.18.6...@zahradnik-io/gatsby-theme-novela@0.18.7) (2021-03-24)
 
 

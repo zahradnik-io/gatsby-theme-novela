@@ -77,6 +77,7 @@ export type Template = React.FC<{
     article: IArticle;
     authors: IAuthor[];
     mailchimp: boolean;
+    disqus: boolean;
     next: IArticle[];
   };
   location: Location;
