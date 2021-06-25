@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 import { useColorMode } from 'theme-ui';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Icons from '@icons';
 
@@ -157,6 +158,8 @@ const ArticleShare: React.FC<{}> = () => {
     setCanTweet(tweet.length <= tweetLimit);
   }, [text]);
 
+  const { t } = useTranslation();
+  
   return (
     <MenuFloat
       style={{
@@ -168,7 +171,7 @@ const ArticleShare: React.FC<{}> = () => {
       }}
       isDark={isDark}
     >
-      <MenuText>Share: </MenuText>
+      <MenuText>{t("Share: ")}</MenuText>
       <ReferralLink disabled={!canTweet} share={share.twitter}>
         <Icons.Twitter width="18px" height="15px" />
       </ReferralLink>
@@ -176,7 +179,7 @@ const ArticleShare: React.FC<{}> = () => {
         <Icons.LinkedIn width="16px" height="16px" />
       </ReferralLink>
       <MenuDivider />
-      <MenuButton onClick={handleCopyClick} aria-label="Copy selected text">
+      <MenuButton onClick={handleCopyClick} aria-label={t("Copy selected text")}>
         <Icons.Copy />
       </MenuButton>
     </MenuFloat>
@@ -197,13 +200,15 @@ function ReferralLink({ disabled, share, children }) {
     );
   }
 
+  const { t } = useTranslation();
+
   return (
     <MenuShare
       href={disabled ? '' : share}
       onClick={handleClick}
       disabled={disabled}
     >
-      <Hidden>Share the selected text</Hidden>
+      <Hidden>{t("Share the selected text")}</Hidden>
       {children}
     </MenuShare>
   );

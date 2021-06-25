@@ -1,18 +1,20 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import styled from '@emotion/styled';
 
 import Image from '@components/Image';
 import { IAuthor } from '@types';
 
 const Bio: React.FC<IAuthor> = ({ author }) => {
+  const { t } = useTranslation();
+  
   return (
     <BioContainer>
       <BioAvatar
         as={author.authorsPage ? Link : 'div'}
         to={author.slug}
         data-a11y="false"
-        aria-label="Author's bio"
+        aria-label={t("Author's bio")}
       >
         <BioAvatarInner>
           <RoundedImage src={author.avatar.medium} />

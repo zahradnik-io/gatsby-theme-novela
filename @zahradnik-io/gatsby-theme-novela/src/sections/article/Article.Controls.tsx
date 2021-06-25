@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { useColorMode } from "theme-ui";
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import mediaqueries from "@styles/media";
 import { copyToClipboard } from "@utils";
@@ -42,6 +43,7 @@ const ShareDarkModeOnIcon: React.FC<{}> = () => (
 const DarkModeToggle: React.FC<{}> = () => {
   const [colorMode, setColorMode] = useColorMode();
   const isDark = colorMode === `dark`;
+  const { t } = useTranslation();
 
   function toggleColorMode(event) {
     event.preventDefault();
@@ -51,7 +53,7 @@ const DarkModeToggle: React.FC<{}> = () => {
   return (
     <IconWrapper
       onClick={toggleColorMode}
-      aria-label="Toggle dark and light mode"
+      aria-label={t("Toggle dark and light mode")}
     >
       <MoonOrSun isDark={isDark} />
       <MoonMask isDark={isDark} />
@@ -63,6 +65,7 @@ const SharePageButton: React.FC<{}> = () => {
   const [hasCopied, setHasCopied] = useState<boolean>(false);
   const [colorMode] = useColorMode();
   const isDark = colorMode === `dark`;
+  const { t } = useTranslation();
 
   function copyToClipboardOnClick() {
     if (hasCopied) return;
@@ -81,7 +84,7 @@ const SharePageButton: React.FC<{}> = () => {
     <IconWrapper
       onClick={copyToClipboardOnClick}
       data-a11y="false"
-      aria-label="Copy URL to clipboard"
+      aria-label={t("Copy URL to clipboard")}
     >
       <Icon />
       <ToolTip isDark={isDark} hasCopied={hasCopied}>

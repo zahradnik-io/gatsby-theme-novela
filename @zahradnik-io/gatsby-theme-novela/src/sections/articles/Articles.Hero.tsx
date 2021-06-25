@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import styled from '@emotion/styled';
 
 import Section from '@components/Section';
@@ -36,11 +37,12 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
   const hero = results.site.edges[0].node.siteMetadata.hero;
   const tilesIsActive = hasSetGridLayout && gridLayout === 'tiles';
   const featuredAuthor = authors.find(author => author.featured);
+  const { t } = useTranslation();
 
   if (!featuredAuthor) {
     throw new Error(`
-      No featured Author found.
-      Please ensure you have at least featured Author.
+      ${t("No featured Author found.")}
+      ${t("Please ensure you have at least featured Author.")}
   `);
   }
 
@@ -56,8 +58,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             onClick={() => setGridLayout('tiles')}
             active={tilesIsActive}
             data-a11y="false"
-            title="Show articles in Tile grid"
-            aria-label="Show articles in Tile grid"
+            title={t("Show articles in Tile grid")}
+            aria-label={t("Show articles in Tile grid")}
           >
             <Icons.Tiles />
           </GridButton>
@@ -65,8 +67,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             onClick={() => setGridLayout('rows')}
             active={!tilesIsActive}
             data-a11y="false"
-            title="Show articles in Row grid"
-            aria-label="Show articles in Row grid"
+            title={t("Show articles in Row grid")}
+            aria-label={t("Show articles in Row grid")}
           >
             <Icons.Rows />
           </GridButton>

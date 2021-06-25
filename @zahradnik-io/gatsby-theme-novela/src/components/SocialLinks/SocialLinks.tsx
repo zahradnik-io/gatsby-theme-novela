@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Icons from '@icons';
 import mediaqueries from '@styles/media';
@@ -49,6 +50,8 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
 }) => {
   if (!links) return null;
 
+  const { t } = useTranslation();
+  
   return (
     <>
       {links.map(option => {
@@ -56,7 +59,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
         const Icon = icons[name] ? icons[name] : icons['url'];
         if (!Icon) {
           throw new Error(
-            `unsupported social link name=${name} / url=${option.url}`,
+            `${t('unsupported social link name={{name}}, / url={{option.url}}', {name, option})}`,
           );
         }
         return (
@@ -65,7 +68,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
             target="_blank"
             rel="noopener nofollow"
             data-a11y="false"
-            aria-label={`Link to ${option.url}`}
+            aria-label={`${t('Link to')} ${option.url}`}
             href={option.url}
           >
             <Icon fill={fill} />

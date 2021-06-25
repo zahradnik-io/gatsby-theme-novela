@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
-import { Link } from "gatsby";
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import { Helmet } from "react-helmet";
 
 import mediaqueries from "@styles/media";
@@ -131,6 +131,7 @@ class Paginator extends Component<IPaginator, {}> {
     const nextPath = this.nextPath;
     const hasNext = this.current < this.count;
     const hasPrevious = this.current > 1;
+    const { t } = useTranslation();
 
     return (
       <>
@@ -139,12 +140,12 @@ class Paginator extends Component<IPaginator, {}> {
           {hasNext && <link rel="next" href={nextPath} />}
         </Helmet>
         <Frame>
-          {hasPrevious && <PageButton to={previousPath}>Prev</PageButton>}
+          {hasPrevious && <PageButton to={previousPath}>{t("Prev")}</PageButton>}
           {this.getPageLinks}
           <MobileReference aria-hidden="true">
             <em>{current}</em>&nbsp;of {count}
           </MobileReference>
-          {hasNext && <PageButton to={nextPath}>Next</PageButton>}
+          {hasNext && <PageButton to={nextPath}>{t("Next")}</PageButton>}
         </Frame>
       </>
     );

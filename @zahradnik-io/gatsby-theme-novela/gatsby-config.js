@@ -5,6 +5,12 @@ module.exports = ({
   contentPosts = 'content/posts',
   pathPrefix = '',
   sources: { local, contentful } = { local: true, contentful: false },
+  localization: { localePath, enabledLanguages, defaultLanguage } = {
+    localePath: `${__dirname}/src/l10n`,
+    enabledLanguages: [`en`], // supported: en, sk
+    defaultLanguage: 'en'
+  },
+  siteUrl = 'https://www.example.com',
 }) => ({
   pathPrefix,
   mapping: {
@@ -200,6 +206,13 @@ module.exports = ({
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: localePath,
+        name: 'locale',
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
@@ -257,5 +270,23 @@ module.exports = ({
         autoLabel: process.env.NODE_ENV === `development`,
       },
     },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: enabledLanguages,
+        defaultLanguage: defaultLanguage,
+        // if you are using Helmet, you must include siteUrl, and make sure you add http:https
+        siteUrl: siteUrl,
+        // you can pass any i18next options
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false
+        }
+      }
+    }
   ],
 });

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import { Link, navigate, graphql, useStaticQuery } from "gatsby";
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
+import { navigate, graphql, useStaticQuery } from "gatsby";
 import { useColorMode } from "theme-ui";
 
 import Section from "@components/Section";
@@ -25,6 +26,8 @@ const siteQuery = graphql`
   }
 `;
 
+const { t } = useTranslation();
+
 const DarkModeToggle: React.FC<{}> = () => {
   const [colorMode, setColorMode] = useColorMode();
   const isDark = colorMode === `dark`;
@@ -39,8 +42,8 @@ const DarkModeToggle: React.FC<{}> = () => {
       isDark={isDark}
       onClick={toggleColorMode}
       data-a11y="false"
-      aria-label={isDark ? "Activate light mode" : "Activate dark mode"}
-      title={isDark ? "Activate light mode" : "Activate dark mode"}
+      aria-label={isDark ? t("Activate light mode") : t("Activate dark mode")}
+      title={isDark ? t("Activate light mode") : t("Activate dark mode")}
     >
       <MoonOrSun isDark={isDark} />
       <MoonMask isDark={isDark} />
@@ -70,8 +73,8 @@ const SharePageButton: React.FC<{}> = () => {
       isDark={isDark}
       onClick={copyToClipboardOnClick}
       data-a11y="false"
-      aria-label="Copy URL to clipboard"
-      title="Copy URL to clipboard"
+      aria-label={t("Copy URL to clipboard")}
+      title={t("Copy URL to clipboard")}
     >
       <Icons.Link fill={fill} />
       <ToolTip isDark={isDark} hasCopied={hasCopied}>
@@ -112,8 +115,8 @@ const NavigationHeader: React.FC<{}> = () => {
         <LogoLink
           to={rootPath || basePath}
           data-a11y="false"
-          title="Navigate back to the homepage"
-          aria-label="Navigate back to the homepage"
+          title={t("Navigate back to the homepage")}
+          aria-label={t("Navigate back to the homepage")}
           back={showBackArrow ? "true" : "false"}
         >
           {showBackArrow && (
@@ -128,8 +131,8 @@ const NavigationHeader: React.FC<{}> = () => {
           {showBackArrow ? (
             <button
               onClick={() => navigate(previousPath)}
-              title="Navigate back to the homepage"
-              aria-label="Navigate back to the homepage"
+              title={t("Navigate back to the homepage")}
+              aria-label={t("Navigate back to the homepage")}
             >
               <Icons.Ex fill={fill} />
             </button>

@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import throttle from "lodash/throttle";
 import { graphql, useStaticQuery } from "gatsby";
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 import Layout from "@components/Layout";
 import MDXRenderer from "@components/MDX";
@@ -100,7 +101,7 @@ const Article: Template = ({ pageContext, location }) => {
       <ArticleFooter pageContext={pageContext} articleUrl={articleUrl} />
       {next.length > 0 && (
         <NextArticle narrow>
-          <FooterNext>More articles from {name}</FooterNext>
+          <FooterNext><Trans>More articles from {name}</Trans></FooterNext>
           <ArticlesNext articles={next} />
           <FooterSpacer />
         </NextArticle>

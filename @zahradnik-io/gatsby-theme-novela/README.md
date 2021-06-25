@@ -541,19 +541,23 @@ To disable comments on individual Posts you can set `comments: false` on the Pos
 
 It is recommended to use the Default options, but if your project requires something else you can configure them to your need.
 
-| Option                 | Default         | Description                                                                                                                         |
-| ---------------------- | :-------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| contentPosts           | content/posts   | Define where you want to pull your Post data from                                                                                   |
-| contentAuthors         | content/authors | Define where you want to pull your Author data from                                                                                 |
-| authorsPage            | false           | Create Author pages                                                                                                                 |
-| authorsPath            | /authors        | Where should Author pages live?                                                                                                     |
-| rootPath               | /               | Define the index of your site                                                                                                       |
-| basePath               | /               | Where should the site be served from? `/blog` will change all paths to start with `/blog`                                           |
-| articlePermalinkFormat | :slug           | Define the format of the article permalink. Possible values: `:slug`, `:year`, `:month`, `:day`. Example: `:year/:month/:day/:slug` |
-| mailchimp              | false           | Enable Mailchimp subscriptions on each Post                                                                                         |
-| disqus                 | false           | Enable Disqus comments on each Post                                                                                                 |
-| sources.local          | true            | Enable local file system data source                                                                                                |
-| sources.contentful     | false           | Enable Contentful data source                                                                                                       |
+| Option                        | Default                        | Description                                                                                                                         |
+| ----------------------------- | :----------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| contentPosts                  | content/posts                  | Define where you want to pull your Post data from                                                                                   |
+| contentAuthors                | content/authors                | Define where you want to pull your Author data from                                                                                 |
+| authorsPage                   | false                          | Create Author pages                                                                                                                 |
+| authorsPath                   | /authors                       | Where should Author pages live?                                                                                                     |
+| rootPath                      | /                              | Define the index of your site                                                                                                       |
+| basePath                      | /                              | Where should the site be served from? `/blog` will change all paths to start with `/blog`                                           |
+| pageLength                    | 6                              | How many posts should be shown per page                                                                                             |
+| articlePermalinkFormat        | :slug                          | Define the format of the article permalink. Possible values: `:slug`, `:year`, `:month`, `:day`. Example: `:year/:month/:day/:slug` |
+| mailchimp                     | false                          | Enable Mailchimp subscriptions on each Post                                                                                         |
+| disqus                        | false                          | Enable Disqus comments on each Post                                                                                                 |
+| sources.local                 | true                           | Enable local file system data source                                                                                                |
+| sources.contentful            | false                          | Enable Contentful data source                                                                                                       |
+| siteUrl                       | https://www.example.com/       | Pass your site URL, including the http/https prefix. Most likely, you want it to set to the same value as your siteMetadata.siteUrl |
+| localization.enabledLanguages | ['en']                         | Which languages are enabled on the site? Pass an array of language codes. Supported: 'en', 'sk'                                     |
+| localization.defaultLanguage  | 'en'                           | Which language is used as site-default?                                                                                             |
 
 [View Theme option example](https://github.com/zahradnik-io/gatsby-theme-novela-example/blob/main/gatsby-config.js#L36)
 

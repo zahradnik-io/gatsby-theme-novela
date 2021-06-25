@@ -1,4 +1,5 @@
 import addToMailchimp from "gatsby-plugin-mailchimp";
+import { useTranslation, Trans } from 'gatsby-plugin-react-i18next';
 import React, { useState } from "react";
 
 import Section from "@components/Section";
@@ -11,6 +12,7 @@ const Subscription: React.FC<{}> = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const { t } = useTranslation();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -43,16 +45,20 @@ const Subscription: React.FC<{}> = () => {
       <SubscriptionContainer>
         <Content>
           <Heading>
-            Join our email list and get notified about new content
+            <Trans>
+              Join our email list and get notified about new content
+            </Trans>
           </Heading>
           <Text>
-            Be the first to receive our latest content with the ability to
-            opt-out at anytime. We promise to not spam your inbox or share your
-            email with any third parties.
+            <Trans>
+              Be the first to receive our latest content with the ability to
+              opt-out at anytime. We promise to not spam your inbox or share your
+              email with any third parties.
+            </Trans>
           </Text>
           <Form onSubmit={handleSubmit} hasError={error}>
             <Input
-              placeholder="your@email.com"
+              placeholder={t("your@email.com")}
               name="email"
               type="email"
               value={email}
@@ -65,7 +71,7 @@ const Subscription: React.FC<{}> = () => {
               subscribed={subscribed}
               disabled={subscribed}
             >
-              {subscribed ? <CheckMarkIcon /> : "Subscribe"}
+              {subscribed ? <CheckMarkIcon /> : t("Subscribe")}
             </Button>
             {error && <Error dangerouslySetInnerHTML={{ __html: error }} />}
           </Form>
